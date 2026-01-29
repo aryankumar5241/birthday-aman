@@ -1,0 +1,56 @@
+index.html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Happy Birthday 🎉</title>
+  <style>
+    body {
+      background: black;
+      text-align: center;
+      color: white;
+      overflow: hidden;
+    }
+    img {
+      width: 250px;
+      border-radius: 20px;
+      margin-top: 20px;
+      animation: zoom 2s infinite alternate;
+    }
+    @keyframes zoom {
+      from { transform: scale(1); }
+      to { transform: scale(1.1); }
+    }
+    .btn {
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 30px;
+      background: red;
+      color: white;
+      border: none;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>🎂 Happy Birthday Aman 🎂</h1>
+
+<img src="p1.jpg">
+
+<br>
+
+<button class="btn" onclick="playMusic()">▶ Play Song</button>
+
+<audio id="song">
+  <source src="happy.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function playMusic() {
+  document.getElementById("song").play();
+}
+</script>
+
+</body>
+</html>
