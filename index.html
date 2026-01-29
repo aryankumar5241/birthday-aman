@@ -1,56 +1,64 @@
-index.html
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Happy Birthday 🎉</title>
-  <style>
-    body {
-      background: black;
-      text-align: center;
-      color: white;
-      overflow: hidden;
-    }
-    img {
-      width: 250px;
-      border-radius: 20px;
-      margin-top: 20px;
-      animation: zoom 2s infinite alternate;
-    }
-    @keyframes zoom {
-      from { transform: scale(1); }
-      to { transform: scale(1.1); }
-    }
-    .btn {
-      padding: 15px 30px;
-      font-size: 18px;
-      border-radius: 30px;
-      background: red;
-      color: white;
-      border: none;
-      margin-top: 20px;
-    }
-  </style>
+<title>Happy Birthday </title>
+
+<style>
+body{
+  margin:0;
+  background:black;
+  overflow:hidden;
+  text-align:center;
+  color:white;
+  font-family:sans-serif;
+}
+
+img{
+  width:200px;
+  margin:10px;
+  animation: zoom 3s infinite;
+}
+
+@keyframes zoom{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.1)}
+  100%{transform:scale(1)}
+}
+
+/* balloons */
+.balloon{
+  position:absolute;
+  bottom:-100px;
+  width:40px;
+  height:60px;
+  background:red;
+  border-radius:50%;
+  animation: fly 6s infinite;
+}
+
+@keyframes fly{
+  0%{bottom:-100px}
+  100%{bottom:110%}
+}
+</style>
 </head>
 
 <body>
 
-<h1>🎂 Happy Birthday Aman 🎂</h1>
+<h1> Happy Birthday </h1>
 
 <img src="p1.jpg">
+<img src="p2.jpg">
+<img src="p3.jpg">
+<img src="p4.jpg">
+<img src="p5.jpg">
 
-<br>
+<audio src="happy.mp3" autoplay loop></audio>
 
-<button class="btn" onclick="playMusic()">▶ Play Song</button>
-
-<audio id="song">
-  <source src="happy.mp3" type="audio/mpeg">
-</audio>
-
-<script>
-function playMusic() {
-  document.getElementById("song").play();
-}
-</script>
+<div class="balloon" style="left:10%"></div>
+<div class="balloon" style="left:30%;background:yellow"></div>
+<div class="balloon" style="left:50%;background:blue"></div>
+<div class="balloon" style="left:70%;background:green"></div>
 
 </body>
 </html>
